@@ -31,7 +31,7 @@
     
 	<!-- This site is optimized with the Yoast SEO plugin v18.2 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Thoyokem IND</title>
-    <link rel="stylesheet" href="style.css" media="all" data-minify="1">
+    <link rel="stylesheet" href="assets/css/style.css" media="all">
 	<meta name="description" content="Thoyokem Indonesia menyediakan solusi kimia tekstil berkualitas untuk mendukung industri tekstil nasional – dari pretreatment hingga finishing.">
 
     <!-- Open Graph (untuk Facebook, WhatsApp, LinkedIn) -->
@@ -132,9 +132,10 @@
         -moz-transition: 0.4s all;
         transition: 0.4s all;
       }
-      .rll-youtube-player img:hover {
-        -webkit-filter: brightness(75%);
-      }
+              .rll-youtube-player img:hover {
+            -webkit-filter: brightness(75%);
+            filter: brightness(75%);
+        }
       .rll-youtube-player .play {
         height: 100%;
         width: 100%;
@@ -285,54 +286,8 @@
 
     <div class="loader"></div>
 
-<header class="header">
-        <div class="header__main">
-            <div class="container">
-                    <a href="index.html" class="logo">
-                         <img id="heroImage" class="gambar" src="tykemwhite.png" alt="Thoyokem Indonesia Logo">
-                    </a>
-                <!--NAV PC-->
-                    <nav class="menu">
-                        <ul id="menu-new-header-menu-1" class="menu">
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-76 current_page_item menu-item-861"><a href="index.html" aria-current="page">Beranda</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-862"><a href="perusahaan.html">Perusahaan</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-863"><a href="sertifikasi.html">Sertifikasi</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-858"><a href="produk.html">Produk</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-859"><a href="news.html">Berita</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-860"><a href="contact.html">Hubungi Kami</a></li>
-                        </ul>              
-                    </nav>
-                <!--NAV PC END-->
-                    <a href="contact.html" class="g-button g-button_min">Contact us</a>
-                    <div class="mobile-section">
-                        <div onclick="toggleGambar()" class="burger mobileMenuHandler ">
-                            <span></span>
-                        </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="header__mobile-content">
-            <div class="container">
-                <div class="header__mobile-content-center">
-                <!--NAV Phone-->
-                    <nav class="menu">
-                        <ul id="menu-new-header-menu-1" class="menu header__mobile-content">
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-76 current_page_item menu-item-861"><a href="index.html" aria-current="page">Beranda</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-862"><a href="perusahaan.html">Perusahaan</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-863"><a href="sertifikasi.html">Sertifikasi</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-858"><a href="produk.html">Produk</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-859"><a href="news.html">Berita</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-860"><a href="contact.html">Hubungi Kami</a></li>
-                        </ul>                
-                    </nav>
-                <!--NAV Phone END-->
-                    <a href="contact.html" class="g-button">Contact us</a>
-                </div>
-            </div>
-            <br><br><br><br><br><br>
-        </div>
-    </header>
+<!-- Header Container -->
+    <div id="header-container"></div>
 
 <!-- Main Content -->
 
@@ -346,12 +301,6 @@
             <p class="text">
               Thoyokem Indonesia adalah mitra terpadu untuk kebutuhan bahan kimia tekstil — mulai dari <i>pretreatment</i>, pewarnaan, hingga <i>finishing</i>. Manfaatkan layanan dan produk kami yang menyeluruh untuk mendukung proses produksi yang konsisten, ramah lingkungan, dan dapat disesuaikan dengan pertumbuhan bisnis Anda.
             </p>
-            <div class="right-side-bg">
-              <img
-                src="https://angle2.agency/wp-content/uploads/hero__bg-1.svg"
-                alt="background"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -363,7 +312,7 @@
             <div class="timeline__item">
               <div class="item item_number">
                 <div class="content" style="overflow-x: auto;">
-                  <select id="produk" onchange="tampilkanTabel()" class="g-button">
+                  <select id="produk" class="g-button">
                     <option value="">-- Pilih --</option>
                     <option value="PRE_TREATMENT_AUXILIARIES">PRE-TREATMENT AUXILIARIES</option>
                     <option value="DYEING_AUXILIARIES">DYEING AUXILIARIES</option>
@@ -437,170 +386,11 @@
         </div>
       </section>
 
-<!-- Help Froms -->
-        <div class="section__contact-form" id="contact-form">
-            <div class="container">
-                <div class="content">
-                    <h2 class="title">Butuh<br>Bantuan?</h2>
-                    <p class="text">Silakan isi formulir ini untuk memulai percakapan — kami akan segera menghubungi Anda kembali.<span class="form-line"><span></span></span></p>
-                </div>
+        <!-- Contact Form Container -->
+        <div id="contact-form-container"></div>
 
-                <div class="form">
-                    <div role="form" class="wpcf7" id="wpcf7-f964-o1" lang="en-US" dir="ltr">
-                        <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p><ul></ul></div>
-                        <form action="/cases/#wpcf7-f964-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init" id="gmailForm">
-                        <div style="display: none;">
-                            <label>Nama</label>
-                            <input type="text" id="nama" placeholder="Nama" required><br>
-
-                            <label>Nama Perusahaan</label>
-                            <input type="text" id="perusahaan" placeholder="Nama Perusahaan"><br>
-
-                            <label>Email Anda</label>
-                            <input type="email" id="email" placeholder="Email Anda" required><br>
-
-                            <label>Keterangan</label>
-                            <textarea id="pesan" placeholder="Keterangan" required></textarea><br>
-                        </div>
-
-                        <p><span class="wpcf7-form-control-wrap f-name"><input type="text" name="f-name" value="" size="40" minlength="3" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your name"></span></p>
-                        <p><span class="wpcf7-form-control-wrap f-company"><input type="text" name="f-company" value="" size="40" minlength="3" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Company name"></span></p>
-                        <p><span class="wpcf7-form-control-wrap f-email"><input type="text" name="f-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="new-password" aria-required="true" aria-invalid="false" placeholder="Your email"></span></p>
-                        <p><span class="wpcf7-form-control-wrap f-comment"><textarea name="f-comment" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Tell us a little about your project"></textarea></span></p>
-                        <button type="submit" class="wpcf7-form-control wpcf7-submit">Kirim via Gmail</button>
-                        <div class="wpcf7-response-output" aria-hidden="true"></div></form></div>
-                            <div class="form__popup">
-                                <div class="subtitle">Amazing!</div>
-                                <div class="title">Thank you so much!</div>
-                                <div class="text">See you soon</div>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="file" name="base_js" style="display: none;"><input type="hidden" name="base_js_url" value="https://www.youtube.com/s/player/94f771d8/player_ias.vflset/id_ID/base.js">
-                </div>
-
-<!-- Footer Start -->               
-                <footer class="footer">
-                    <div class="container">
-                        <div class="column">
-                            <div class="logo-with-text">
-                                <div class="logo">
-                                    <img src="tykemwhite.png" alt="Logo">
-                                </div>
-                                <div class="text">Your partner and solution in every drop of textile chemistry</div>
-                            </div>
-
-                            <ul class="chevrons">
-                                <li class="chevrons__item">
-                                    <a target="_blank" href="https://www.daiichikimiaraya.com/"><img width="999" height="1080" src="daichi.png" alt="daichi data-lazy-src="daichi.png">
-                                        <noscript>
-                                            <img width="999" height="1080"src="daichi.png"alt="daichi">  
-                                        </noscript>
-                                    </a>
-                                </li>
-                                <li class="chevrons__item">
-                                    <a target="_blank" href="https://bpjph.halal.go.id/"><img width="999" height="1080" src="hal.png" alt="daichi data-lazy-src="daichi.png">
-                                        <noscript>
-                                            <img width="999" height="1080"src="hal.png"alt="halal">  
-                                        </noscript>
-                                    </a>
-                                </li>
-                                <li class="chevrons__item">
-                                    <a target="_blank" href="https://www.asutex.com/"><img width="999" height="1080" src="asutex.png" alt="daichi data-lazy-src="daichi.png">
-                                        <noscript>
-                                            <img width="999" height="1080"src="asutex.png"alt="asutex">  
-                                        </noscript>
-                                    </a>
-                                </li>
-                                <li class="chevrons__item">
-                                    <a target="_blank" href="https://services.oeko-tex.com/newoekotex/portal/for-new-website/customer_profile/41706~1uZiSC~W51tskhVnowKxAt3JQg24-maR5E/"><img width="999" height="1080" src="oekotex.png" alt="daichi data-lazy-src="daichi.png">
-                                        <noscript>
-                                            <img width="999" height="1080"src="oekotex.png" lt="oekotex">  
-                                        </noscript>
-                                    </a>
-                                </li>
-                                <li class="chevrons__item">
-                                    <a target="_blank" href="https://services.oeko-tex.com/newoekotex/portal/for-new-website/customer_profile/41706~1uZiSC~W51tskhVnowKxAt3JQg24-maR5E/"><img width="999" height="1080" src="zdhclog.png" alt="daichi data-lazy-src="daichi.png">
-                                        <noscript>
-                                            <img width="999" height="1080"src="zdhclog.png"alt="zdhclog">  
-                                        </noscript>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="column menu-wrap">
-                            <nav class="menu">
-                                <ul id="menu-new-footer-menu" class="menu">
-                                    <li id="menu-item-867" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-76 current_page_item menu-item-867"><a href="index.html" aria-current="page">Beranda</a></li>
-                                    <li id="menu-item-865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-865"><a href="perusahaan.html">Tentang</a></li>
-                                    <li id="menu-item-868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-868"><a href="produk.html">Produk</a></li>
-                                    <li id="menu-item-864" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-864"><a href="sertifikasi.html">Sertifikasi</a></li>
-                                </ul>
-                                <ul class="links">
-                                    <li><a href="contact.html">Kontak Kami</a></li>
-                                </ul>
-                            </nav>
-                            <br>
-                            <div style="width: 100%">
-                            <iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Ruko%20Buah%20Batu%20Comercial,%20Jalan%20Adhyaksa%20Raya%20No.32,%20Kota%20Bandung,%20Jawa%20Barat,%20Kujangsari,%20Kec.%20Bandung%20Kidul,%20Kota%20Bandung,%20Jawa%20Barat%2040287+(Head%20to%20Office)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                                <a href="https://www.mapsdirections.info/calcular-la-población-en-un-mapa">Mapa de población</a>
-                            </iframe>
-                        </div>
-                        </div>
-
-
-                        <div class="column mobile-socials-section">
-                            <ul class="socials mobile_visible">
-                                
-                                <li><a href="https://www.instagram.com/thoyokem.indonesia/" target="_blank">Instagram</a></li>
-                            </ul>
-                            
-                            <div class="socials-with-icon">
-                                <a class="socials-with-icon__item" target="_blank" href="https://www.instagram.com/thoyokem.indonesia/">
-                                    <span class="img">
-                                        <img src="insta.png" alt="">
-                                    </span>
-                                    <span class="text">Instagram</span>
-                                </a>
-                                <div class="socials-with-icon__item">
-                                    <span class="img">
-                                        <img src="tele.png" alt="">
-                                    </span>
-                                    <span class="text">Telp : 022-87798804</span>
-                                </div>
-                                 <div class="socials-with-icon__item">
-                                    <span class="img">
-                                        <img src="tele.png" alt="">
-                                    </span>
-                                    <span class="text">Fax : 022-87798805</span>
-                                </div>
-                                <a class="socials-with-icon__item" target="_blank" href="https://wa.me/02287798804">
-                                    <span class="img">
-                                        <img src="whatsapp.png" alt="">
-                                    </span>
-                                    <span class="text">Whatsapp (Telephone)</span>
-                                </a>
-                                <a class="socials-with-icon__item" target="_blank" href="mailto:admin@thoyokem.com">
-                                    <span class="img">
-                                        <img src="gmail.png" alt="">
-                                    </span>
-                                    <span class="text">admin@thoyokem.com</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="column">
-                            <div class="copyright">By | Veppuz Vex</div>
-                        </div>
-
-                        <div class="column mobile_hidden">
-                            <ul class="socials">
-                                <li><a href="https://www.instagram.com/thoyokem.indonesia/" target="_blank">Instagram</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </footer>
+        <!-- Footer Container -->
+        <div id="footer-container"></div>
             </div>
         </div>
     </main>
@@ -664,28 +454,7 @@
         }
     </style>
 
-    <script>
-    document.getElementById("gmailForm").addEventListener("submit", function(e) {
-        e.preventDefault();
 
-        const nama = document.querySelector('[name="f-name"]').value;
-        const perusahaan = document.querySelector('[name="f-company"]').value;
-        const email = document.querySelector('[name="f-email"]').value;
-        const pesan = document.querySelector('[name="f-comment"]').value;
-
-        const tujuan = "admin@thoyokem.com"; // Ganti dengan email tujuan
-        const subject = encodeURIComponent("Pesan dari Website");
-        const body = encodeURIComponent(
-        `Nama: ${nama}\n` +
-        `Perusahaan: ${perusahaan}\n` +
-        `Email: ${email}\n\n` +
-        `Keterangan:\n${pesan}`
-        );
-
-        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${tujuan}&su=${subject}&body=${body}`;
-        window.open(gmailURL, '_blank');
-    });
-    </script>
 
     <script
       type="text/javascript"
@@ -1189,262 +958,15 @@
       })(window, document, "clarity", "script", "qpnl1v9qzj");
     </script>
 
-    <script>
-    const dataMakanan = {
-      PRE_TREATMENT_AUXILIARIES: [
-        { nama: 'Thoyoscour CE-11', deskripsi: 'Scouring agent untuk semua jenis kain, PE, Cotton atau campurannya'},
-        { nama: 'Thoyoscour DMC', deskripsi: 'Scouring agent untuk kain Polyester atau campurannya'},
-        { nama: 'Thoyoscour SMC-4', deskripsi: 'Scouring agent spesial untuk proses continues semua serat'},
-        { nama: 'Thoyoscour SO', deskripsi: 'Scouring agent dengan basic Phospate Ester'},
-        { nama: 'Thoyoscour PET-29', deskripsi: 'Scouring agent low foaming untuk kain polyester dengan mesin JET Dyeing'},
-        { nama: 'Thoyoscour NBS', deskripsi: 'Scouring agent yang cocok untuk jenis kain Nylon'},
-        { nama: 'Thoyoscour AW', deskripsi: 'Scouring agent yang cocok untuk jenis kain Acrylic/Woll'},
-        { nama: 'Thoyowet AFC 5', deskripsi: 'Wetting agent dengan daya penetrasi yang sangat baik'},
-        { nama: 'Thoyowet MCR', deskripsi: 'Wetting agent tahan caustic untuk proses mercerize atau wight reduce'},
-        { nama: 'Thoyowet DAW', deskripsi: 'Deaerating agent untuk mempermudah pembasahan kain'},
-        { nama: 'Thoyocrease FA', deskripsi: 'Anti creasemark dengan basic Fatty Acid'},
-        { nama: 'Thoyocrease POB', deskripsi: 'Anti creasemark dengan basic kimia polymer'},
-        { nama: 'Thoyoliary MP', deskripsi: 'Multi Purpose, scouring, dan wshing untuk proses cepat dyeing cotton warna tua'},
-        { nama: 'Thoyosquest PB', deskripsi: 'Squestering agent, tahan terhadap hydroslisis, temperatur tinggi & pH'},
-        { nama: 'Thoyosquest T-20', deskripsi: 'Squestering agent'},
-        { nama: 'Presquester RC', deskripsi: 'Squestering, soaping agent untuk zat warna reaktif'},
-        { nama: 'Perokill AP', deskripsi: 'Peroxide killer'},
-        { nama: 'Thoyostab NS', deskripsi: 'Stabilizer (penstabil H2O2) non silikat'},
-        { nama: 'Thoyowash MR', deskripsi: 'Sabun tahan kostik'}
-      ],
-      DYEING_AUXILIARIES: [
-        { nama: 'Thoyolev P-57', deskripsi: 'Levelling dispersing agent untuk pencelupan polyester'},
-        { nama: 'Thoyolev A-45', deskripsi: 'Levelling dispersing agent untuk pencelupan polyester khususnya benang'},
-        { nama: 'Thoyolev B-76', deskripsi: 'Levelling agent konsentrasi tinggi'},
-        { nama: 'Thoyolev NBS', deskripsi: 'Levelling agent untuk proses celup Nylon'},
-        { nama: 'Dispersing ES-25', deskripsi: 'Dispersing agent untuk pencelupan polyester dan campurannya'},
-        { nama: 'Bright NCS', deskripsi: 'Celup 1 proses tanpa levelling -asam- dispersing'},
-        { nama: 'Thoyofine AN-03', deskripsi: 'Dyeing agent, pembuat suasana pH asam sekaligus dapat untuk netralisasi'},
-        { nama: 'Thoyofine PSP', deskripsi: 'Subtitusi Soda ash power'},
-        { nama: 'Thoyofine SSA', deskripsi: 'Subtitusi Soda ash cair'},
-        { nama: 'Thoyoliary MP', deskripsi: 'Multi Purpose – Scouring, Washing untuk simple proses cotton warna tua'},
-        { nama: 'Thoyoliary PDS', deskripsi: 'Multi Purpose – Desizing, Scouring, Bleaching kain polyester woven'},
-        { nama: 'Carrier KB', deskripsi: 'Carrier Agent untuk celup kain Putih < 100°C'},
-        { nama: 'Carrier MN', deskripsi: 'Carrier Agent untuk celup kain warna < 100°C'}
-      ],
-      PRINTING_AUXILIARIES: [
-        { nama: 'Binder 2ST', deskripsi: 'Binder Pigment – Copolymer of Acrylic & Vynil Acrylate'},
-        { nama: 'Binder DT-100', deskripsi: 'Binder Pigment – Copolymer of Acrylic & Vynil Acrylate'},
-        { nama: 'Binder DT-200', deskripsi: 'Binder Pigment – Copolymer of Acrylic & Vynil Acrylate'},
-        { nama: 'Binder EBS', deskripsi: 'Binder Pigment – Copolymer of Acrylic & Vynil Acrylate'},
-        { nama: 'Binder Soft SB', deskripsi: 'Binder Pigment (Soft Handle)'},
-        { nama: 'Bronze Binder', deskripsi: 'Binder untuk Bronze Powder'},
-        { nama: 'Emulsifier DML', deskripsi: 'Pengental basic Emulsifier'},
-        { nama: 'Thoyoprint D-11', deskripsi: 'Pengental Synthetic untuk Disperse Printing'},
-        { nama: 'Thoyoprint DP', deskripsi: 'Pengental Synthetic untuk Disperse Printing'},
-        { nama: 'Thoyoprint PES', deskripsi: 'Pengental Synthetic untuk Disperse Printing'},
-        { nama: 'Brightprint WF', deskripsi: 'Pengental Synthetic untuk Pigment Printing'},
-        { nama: 'Thoyoprint P-17', deskripsi: 'Pengental Synthetic untuk Pigment Printing'},
-        { nama: 'Thoyoprint R-08', deskripsi: 'Pengental Synthetic untuk Reaktif Printing'},
-        { nama: 'Thoyoprint R8H', deskripsi: 'Pengental Campuran Synthetic Alginat untuk Reaktif Printing'},
-        { nama: 'Thoyoprint RC New', deskripsi: 'Pengental Campuran Synthetic Alginat untuk Reaktif Printing'},
-        { nama: 'Thoyoprint DA 200', deskripsi: 'Penambah daya tembus pada printing (deaerating agent)'},
-        { nama: 'TY Print Oil', deskripsi: 'Oil Lubricant untuk Pigment Print'},
-        { nama: 'Alginate LV', deskripsi: 'Pengental Alginate (ganggang laut) dengan Kekentalan Rendah'},
-        { nama: 'Alginate HV', deskripsi: 'Pengental Alginate (ganggang laut) dengan Kekentalan Tinggi'},
-        { nama: 'Alginate MV', deskripsi: 'Pengental Alginate (ganggang laut) dengan Kekentalan Menengah'}
-      ],
-      SOAPING_RC: [
-        { nama: 'Thoyosoap CLN', deskripsi: 'Soaping agent acrylate based', kategori: 'AFTER-TREATMENT AUXILIARIES' },
-        { nama: 'Thoyosoap RC', deskripsi: 'Soaping agent yang mengandung squestering agent tahan kostik', kategori: 'AFTER-TREATMENT AUXILIARIES' },
-        { nama: 'Thoyosoap TCR', deskripsi: 'Soaping agent alcohol ethoxylate', kategori: 'AFTER-TREATMENT AUXILIARIES' },
-        { nama: 'Thoyosoap RC-20', deskripsi: 'Soaping agent alcohol ethoxylate (cuci reaktif), menghemat air', kategori: 'AFTER-TREATMENT AUXILIARIES' },
-        { nama: 'Thoyowash RCA', deskripsi: 'Reduction cleaning untuk polyester suasana asam', kategori: 'AFTER-TREATMENT AUXILIARIES' },
-        { nama: 'Thoyowash TH-25', deskripsi: 'Reduction cleaning untuk polyester suasana alkali', kategori: 'AFTER-TREATMENT AUXILIARIES' },
-        { nama: 'Thoyofix – 40D', deskripsi: 'Fixing agent untuk reaktif', kategori: 'AFTER-TREATMENT AUXILIARIES' },
-        { nama: 'Thoyofix NF', deskripsi: 'Fixing agent untuk direk dan reaktif', kategori: 'AFTER-TREATMENT AUXILIARIES' }
-      ],
-      DYES_PIGMENT: [
-        { nama: 'Sky Blue', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' },
-        { nama: 'TY Black NJK', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' },
-        { nama: 'TY Blue P-02', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' },
-        { nama: 'TY Orange 13', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' },
-        { nama: 'TY Red Gr', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' },
-        { nama: 'Ty Red Gr New', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' },
-        { nama: 'TT Red S-02', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' },
-        { nama: 'Violet FFBN', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' },
-        { nama: 'Brightwhite CN', deskripsi: 'Zat Warna Pigment', kategori: 'PIGMENT COLORS' }
-      ],
-      FINISHING: [
-        { nama: 'Thoyosoft CK', deskripsi: 'Softener cationic Fatty Acid', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyosoft CFL', deskripsi: 'Softener Flake cationic Fatty Acid', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyosoft NI', deskripsi: 'Softener Non Ionic Fatty Acid', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyosoft NLC', deskripsi: 'Softener Non Ionic Fatty Acid', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyosoft NHC', deskripsi: 'Softener Non Ionic Fatty Acid', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyofeel HN-15', deskripsi: 'Softener Non Ionic water absorb', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyofeel HC-10', deskripsi: 'Softener cationic water absorb', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyosoft WD', deskripsi: 'Softener cationic for cotton, water absorb', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyosoft HDP', deskripsi: 'Silicone Hydrophilic', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyosoft QME', deskripsi: 'Softener Quaternary Blend Parafin Wax', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Hydrosoft SR', deskripsi: 'Softener Amino Silicone untuk semua jenis serat', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Hydrosoft AW', deskripsi: 'Softener Amino Silicone untuk semua jenis serat', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Hydrosoft Conc', deskripsi: 'Softener Amino Silicone High Conc', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Hydrosoft SP Conc', deskripsi: 'Softener Amino Silicone High Conc', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Hydrosoft SS 150', deskripsi: 'Silicone Softener Siloxanes Derivative', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyores DLP', deskripsi: 'Pengeras – Basic Melamine Formaldehide', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyores EP', deskripsi: 'Pengeras – Basic Melamine Formaldehide', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyofoam Conc SE', deskripsi: 'Antifoam Conc – Silicone', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyofoam SP', deskripsi: 'Antifoam', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyostiff 5101', deskripsi: 'Pengeras Poly Vynil Acetat (PVAc) sc 40', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyostiff J5', deskripsi: 'Pengeras Poly Vynil Acetat (PVAc) sc 50', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Thoyowax PRF', deskripsi: 'Softener emulsi untuk kalendering efek', kategori: 'FINISHING AUXILIARIES' },
-        { nama: 'Filler PCR', deskripsi: 'Filler untuk pengisi semua jenis kain', kategori: 'FINISHING AUXILIARIES' }
-      ],
-      WATER_TREATMENT: [
-        { nama: 'PAC Powder', deskripsi: 'Poly Alumunium Cloride (PAC)', kategori: 'GENERAL CHEMICALS' }
-      ],
-      SPECIALITY: [
-        { nama: 'Flameguard TYB', deskripsi: 'Anti Api', kategori: 'SPECIAL FUNCTION AUXILIARIES' },
-        { nama: 'Thoyoguard FSC', deskripsi: 'Water repellent C-6', kategori: 'SPECIAL FUNCTION AUXILIARIES' },
-        { nama: 'Thoyoguard FZ', deskripsi: 'Water repellent C-0', kategori: 'SPECIAL FUNCTION AUXILIARIES' },
-        { nama: 'Thoyofine AM', deskripsi: 'Anti Migrasi', kategori: 'SPECIAL FUNCTION AUXILIARIES' },
-        { nama: 'Thoyoprint AR', deskripsi: 'Anti Reduksi', kategori: 'SPECIAL FUNCTION AUXILIARIES' }
-      ],
-      GENERAL_CHEMICAL: [
-        { nama: 'Acetic Acid Lotte', deskripsi: 'Bahan kimia dasar (asam asetat) – merk Lotte', kategori: 'BASIC & SUPPORTING CHEMICALS' },
-        { nama: 'Acetic Acid Mitsui', deskripsi: 'Bahan kimia dasar (asam asetat) – merk Mitsui', kategori: 'BASIC & SUPPORTING CHEMICALS' },
-        { nama: 'EDTA 4 NA', deskripsi: 'Chelating agent (pengkelat logam berat)', kategori: 'BASIC & SUPPORTING CHEMICALS' },
-        { nama: 'H2O2', deskripsi: 'Hidrogen Peroksida – bleaching agent', kategori: 'BASIC & SUPPORTING CHEMICALS' },
-        { nama: 'Thoyo Thio', deskripsi: 'Reduksi agent (kemungkinan Sodium Thiosulfate)', kategori: 'BASIC & SUPPORTING CHEMICALS' },
-        { nama: 'PEG 4000', deskripsi: 'Polyethylene Glycol – pelarut & pelunak', kategori: 'BASIC & SUPPORTING CHEMICALS' },
-        { nama: 'Thoyosive LMB', deskripsi: 'Kemungkinan bahan bantu khusus (belum ada deskripsi lengkap)', kategori: 'BASIC & SUPPORTING CHEMICALS' }
-      ]
-    };
-
-    function tampilkanTabel() {
-    const pilihan = document.getElementById('produk').value;
-    const isiTabel = document.getElementById('isiTabel');
-    const tabel = document.getElementById('tabelHasil');
-
-    isiTabel.innerHTML = ''; // kosongkan dulu
-
-    if (dataMakanan[pilihan]) {
-      dataMakanan[pilihan].forEach(item => {
-        const row = document.createElement('tr');
-
-        const cellNama = document.createElement('td');
-        cellNama.textContent = item.nama;
-
-        const cellWaktu = document.createElement('td');
-        cellWaktu.textContent = item.deskripsi;
-
-        row.appendChild(cellNama);
-        row.appendChild(cellWaktu);
-
-        isiTabel.appendChild(row);
-      });
-      tabel.style.display = 'table';
-    } else {
-      tabel.style.display = 'none';
-    }
-  }
-  </script>
-
-  <!-- Script untuk mengganti gambar saat scroll -->
-    <script>
-        const heroImage = document.getElementById("heroImage");
-
-        window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
-            heroImage.src = "tykem.png"; // ganti ke gambar 2 setelah scroll 50px
-        } else {
-            heroImage.src = "tykemwhite.png"; // kembali ke gambar 1
-        }
-        });
-    </script>
-
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.querySelector(".mobileMenuHandler");
-    const mobileMenu = document.querySelector(".header__mobile-content");
-    const header = document.querySelector("header");
-
-    // BURGER TOGGLE
-    burger.addEventListener("click", function () {
-      const isOpen = mobileMenu.classList.contains("menu-open");
-
-      // Lock/unlock body scroll
-      if (!isOpen) {
-        const scrollY = window.scrollY;
-        document.body.style.setProperty('--scroll-y', `-${scrollY}px`);
-        document.body.classList.add("lock-scroll");
-      } else {
-        const scrollY = document.body.style.getPropertyValue('--scroll-y');
-        document.body.classList.remove("lock-scroll");
-        document.body.style.removeProperty('--scroll-y');
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      }
-
-      // Toggle menu & burger
-      mobileMenu.classList.toggle("menu-open");
-      burger.classList.toggle("burger-active");
-
-      // Tambahkan header_filled jika menu dibuka
-      if (!header.classList.contains("header_filled")) {
-        header.classList.add("header_filled");
-      }
-    });
-
-    // SCROLL BEHAVIOR
-    window.addEventListener("scroll", function () {
-      const isMenuOpen = mobileMenu.classList.contains("menu-open");
-
-      if (window.scrollY > 50 || isMenuOpen) {
-        header.classList.add("header_filled");
-      } else {
-        header.classList.remove("header_filled");
-      }
-    });
-
-    // KLIK DI LUAR UNTUK MENUTUP MENU
-    document.addEventListener("click", function (e) {
-      const isInsideBurger = burger.contains(e.target);
-      const isInsideMenu = mobileMenu.contains(e.target);
-
-      if (!isInsideBurger && !isInsideMenu) {
-        mobileMenu.classList.remove("menu-open");
-        burger.classList.remove("burger-active");
 
 
-        // Jika scrollY <= 50, hapus header_filled
-        if (window.scrollY <= 50) {
-          header.classList.remove("header_filled");
-        }
-      }
-    });
-  });
-</script>
-<script>
-function toggleFAQ(element) {
-  const answer = element.querySelector('.faq-answer');
-  if (answer.style.display === 'block') {
-    answer.style.display = 'none';
-  } else {
-    answer.style.display = 'block';
-  }
-}
-</script>
 
-<script>
-function getQueryParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
 
-document.addEventListener("DOMContentLoaded", function () {
-  const pilihan = getQueryParam("pilihan");
-  if (pilihan) {
-    const select = document.getElementById("produk");
-    select.value = pilihan;
-    tampilkanTabel(); // Panggil fungsi untuk tampilkan sesuai pilihan
-  }
-});
-</script>
+
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/includes.js"></script>
+    <script src="assets/js/produk.js"></script>
 
 </body>
 </html>
